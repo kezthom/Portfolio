@@ -34,20 +34,50 @@
                     <div class="ac2">
                         <div class="subtitle">
                             <h4> A Bit About Me</h4>
-                            <p> Filler text</p> 
-
-                            <div class="tabst">
-                                <p class="tabsl"> Skills </p>
-                                <p class="tabsl"> Experience </p>
-                                <p class="tabsl"> Education </p>
-                            </div>
+                            <p> My experiences make me who I am. Here's a brief summary. </p> 
                         </div>
+                            <div class="tabst">
+                                <p class="tabsl active-link" onclick="opentab('skills')"> Skills </p>
+                                <p class="tabsl" onclick="opentab('experience')"> Experience </p>
+                                <p class="tabsl" onclick="opentab('education')"> Education </p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills"></div>
+                                <ul>
+                                    <li><span> Basic HTML/CSS/JS</span><br>Front End Development</li>
+                                    <li><span> BLS Certified</span><br> Life Saver :P</li>
+                                    <li><span> NASPA Certfied Peer Educator</span><br>Friend</li>
+                                </ul>
+                            <div class="tab-contents" id="experience"></div>
+                                <ul>
+                                 <li><span>July 2023- Current</span> G{Code} Fellow<br></li>
+                                 <li><span>Jan 2023 - Curent</span><br> Math Tutor</li>
+                                 <li><span>July 2018- Current</span><br>Secretary of Youth Ministry</li>
+                                </ul>
+                            <div class="tab-contents" id="education"></div>
+                                <ul>
+                                    <li><span>2025 </span><br>Bachelors of Health Science Candidate</li>
+                                 <li><span>2019</span><br> Julia R Masterman HS</li>
+                             </ul>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
+  <script>
+    var tablink=document.getElementsByClassName("tabsl");
+    var tabcontents=document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+  </script>
   <footer>
     <div class="social">
       <a href="https://twitter.com/thomaskeziaa?s=21&t=CEYjaKr7zo0zTv3TVgsnfA" class="fa fa-twitter"></a>
